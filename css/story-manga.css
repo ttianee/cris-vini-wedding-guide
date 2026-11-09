@@ -1,0 +1,151 @@
+
+/* Isolated styling for the Our Story manga/travel-journal page only.
+   Does not modify shared site styles or the homepage. */
+.story-page{background:#f8f1e7;color:#293b56;overflow:hidden}
+.story-masthead{position:relative;text-align:center;padding:78px 24px 58px;background:linear-gradient(180deg,#f1e4d4 0%,#f8f1e7 100%);isolation:isolate}
+.story-masthead:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:42%;opacity:.35;background:radial-gradient(ellipse at 18% 100%,#d5a18f 0 1%,transparent 48%),radial-gradient(ellipse at 82% 100%,#91a8b6 0 1%,transparent 52%)}
+.story-skyline{position:absolute;inset:20px 8% auto;display:flex;justify-content:space-between;color:#b58d58;font-size:1.2rem;pointer-events:none}
+.story-skyline .moon{width:36px;height:36px;border:1px solid #b58d58;border-radius:50%;box-shadow:8px -4px 0 -5px #f1e4d4}
+.story-masthead h1{font-size:clamp(3.7rem,8vw,6.6rem);font-style:italic;margin:.05em 0;color:#2e405b}
+.story-masthead .eyebrow{margin:0 auto 10px}
+.story-deck{font:1.35rem/1.35 var(--serif);max-width:650px;margin:0 auto;color:#536980}
+.story-intro-note{display:flex;gap:12px;align-items:center;justify-content:center;max-width:620px;margin:28px auto 0;padding:12px 22px;border-top:1px solid #d8c5a7;border-bottom:1px solid #d8c5a7;color:#6c7f8f;font-size:.78rem;letter-spacing:.02em}
+.note-star{color:#b68c58;font-size:1.3rem}
+.story-timeline{width:min(1180px,calc(100% - 52px));margin:0 auto;padding:56px 0 78px;display:grid;gap:28px}
+.story-panel{position:relative;display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.18fr);gap:38px;align-items:center;padding:30px 34px;background:#fffaf3;border:1px solid #e4d4bd;border-radius:5px 24px 8px 20px;box-shadow:0 8px 24px #32445b0b}
+.story-panel:before{content:"";position:absolute;inset:8px;border:1px dashed #dfcdb5;border-radius:4px 18px 5px 14px;pointer-events:none}
+.story-panel:nth-child(even){grid-template-columns:minmax(0,1.18fr) minmax(260px,.82fr)}
+.story-panel:nth-child(even) .panel-copy{order:2}
+.story-panel:nth-child(even) .memory-photo,.story-panel:nth-child(even) .illustration-scene,.story-panel:nth-child(even) .memory-pair,.story-panel:nth-child(even) .proposal-art{order:1}
+.panel-copy{position:relative;z-index:1;padding:8px 4px}
+.chapter-no{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50% 42% 48% 38%;background:#d8a08b;color:#fff;font:italic 1.45rem var(--serif);transform:rotate(-8deg);margin-bottom:14px}
+.panel-copy .eyebrow{font-size:.62rem;color:#a77d4b;margin:0 0 7px}
+.panel-copy h2{font-size:clamp(2rem,3.4vw,3rem);margin:.1em 0 .35em}
+.panel-copy p:not(.eyebrow){font-size:.84rem;line-height:1.85;color:#607489}
+.memory-photo{position:relative;z-index:1;margin:0;background:#fff;padding:10px 10px 34px;box-shadow:0 8px 22px #24354b20;transform:rotate(-1.4deg)}
+.memory-photo img{width:100%;height:330px;object-fit:cover}
+.memory-photo figcaption{position:absolute;bottom:8px;left:12px;right:12px;text-align:center;font:1.1rem 'Caveat',cursive;color:#52647a}
+.tilt-right{transform:rotate(1.6deg)}
+.panel-photo .memory-photo img{height:365px;object-position:center 38%}
+.panel-adventures{grid-template-columns:.8fr 1.2fr}
+.memory-pair{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}
+.memory-pair .memory-photo img{height:245px}
+.memory-pair .memory-photo:first-child{transform:rotate(-2deg)}
+.memory-pair .memory-photo:last-child{transform:rotate(2deg)}
+.travel-stamp{position:absolute;z-index:3;left:calc(50% - 34px);top:35%;width:68px;height:68px;border:1px solid #bb9866;border-radius:50%;background:#f7ecdc;display:grid;place-items:center;color:#a77d4b;transform:rotate(9deg)}
+.travel-stamp span{font-size:1.5rem}.travel-stamp small{font-size:.5rem;letter-spacing:.1em}.travel-stamp i{position:absolute;bottom:-8px;right:-3px}
+.illustration-scene{position:relative;z-index:1;min-height:270px;border:1px solid #e1cdb0;background:linear-gradient(145deg,#f4e5d3,#e5dce0 55%,#d9e2e1);overflow:hidden}
+.windows-scene{display:flex;justify-content:center;align-items:center;gap:20px;padding:25px}
+.window-card{width:34%;height:180px;background:linear-gradient(180deg,#34465d,#1f2e45);border:8px solid #f8e8d1;box-shadow:0 5px 15px #23364a30;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f4d6a1}
+.window-card b{font:1.05rem var(--serif);letter-spacing:.12em}.window-card span{font-size:1.6rem}.window-card i{width:65%;height:2px;background:#d5a36e;box-shadow:0 13px #d5a36e}
+.connection{font-size:.85rem;color:#b28a59;white-space:nowrap}
+.moving-scene{background:linear-gradient(180deg,#e8e3e0,#f5e4d3);display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:250px}
+.plane{font-size:3rem;color:#536d86;transform:rotate(-12deg);z-index:2}
+.route-line{width:70%;border-top:2px dashed #bd9562;transform:rotate(-8deg);margin:12px 0}
+.city-label{display:flex;gap:18px;align-items:center;font-size:.68rem;letter-spacing:.13em;color:#52677e}
+.city-label span{color:#c18d6a}.tulip-row{font-size:1.7rem;color:#c78f83;margin-top:20px}
+.family-photo img{height:340px;object-fit:cover;object-position:center}
+.proposal-art{position:relative;min-height:350px;display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,#273c5a,#52677f 60%,#d99e83);overflow:hidden}
+.full-moon{position:absolute;right:18%;top:13%;width:70px;height:70px;border-radius:50%;background:#f5dfad;box-shadow:0 0 42px #f5dfad80}
+.fortress-roof{position:absolute;left:12%;top:38%;font-size:7rem;color:#d8c7a6;opacity:.9}
+.fortress-line{position:absolute;left:0;right:0;bottom:18%;height:75px;border-top:5px solid #d9c6a6;border-bottom:5px solid #d9c6a6;opacity:.65}
+.proposal-date{position:absolute;top:12px;left:16px;color:#f8e7c9;font-size:.62rem;letter-spacing:.18em}
+.proposal-photo{width:54%;max-width:270px;transform:rotate(4deg);z-index:2}
+.proposal-photo img{height:230px}
+.handwritten-yes{display:block;margin-top:10px;font:2.6rem 'Caveat',cursive;color:#a87569}.handwritten-yes span{color:#c58c79}
+.story-ending{text-align:center;padding:55px 24px 78px;background:linear-gradient(180deg,#f2e5d7,#e8d8ca);position:relative}
+.ending-stars{color:#b28a59;letter-spacing:.5em}
+.ending-script{font:clamp(2.3rem,5vw,4.2rem) 'Caveat',cursive;color:#2e405b;margin:10px auto}
+.story-ending>p:not(.ending-script){font-size:.82rem;color:#617489;max-width:660px;margin:0 auto}
+.ending-date{display:inline-block;margin-top:24px;padding:8px 18px;border-top:1px solid #c6a477;border-bottom:1px solid #c6a477;color:#98764d;font-size:.72rem;letter-spacing:.22em}
+@media(max-width:760px){
+.story-masthead{padding:65px 22px 42px}.story-intro-note{font-size:.72rem}
+.story-timeline{width:calc(100% - 28px);padding:30px 0 45px;gap:18px}
+.story-panel,.story-panel:nth-child(even),.panel-adventures{grid-template-columns:1fr;gap:18px;padding:22px 20px}
+.story-panel:nth-child(even) .panel-copy,.story-panel:nth-child(even) .memory-photo,.story-panel:nth-child(even) .illustration-scene,.story-panel:nth-child(even) .memory-pair,.story-panel:nth-child(even) .proposal-art{order:initial}
+.panel-copy h2{font-size:2.25rem}
+.memory-photo img,.panel-photo .memory-photo img{height:260px}
+.memory-pair .memory-photo img{height:190px}
+.family-photo img{height:280px}
+.proposal-art{min-height:300px}
+}
+@media(max-width:420px){.windows-scene{gap:8px;padding:15px}.window-card{height:145px;border-width:6px}.connection{font-size:.65rem}.memory-pair{gap:8px}.memory-pair .memory-photo{padding:7px 7px 29px}.memory-pair .memory-photo img{height:155px}.memory-pair .memory-photo figcaption{font-size:.9rem}}
+/* Individual photo framing */
+.panel-photo .memory-photo img {
+    object-position: center 30%;
+}
+
+/* Gonçalves – preserve the landscape */
+.memory-pair .memory-photo:first-child img {
+    object-fit: contain;
+    background: #f4eadc;
+}
+
+/* Japan – show both faces and outfits */
+.memory-pair .memory-photo:last-child img {
+    object-fit: contain;
+    background: #f4eadc;
+}
+
+/* Kai and Yuki – keep both kittens visible */
+.family-photo img {
+    object-fit: contain;
+    background: #f4eadc;
+}
+
+.proposal-art {
+    position: relative;
+    min-height: 350px;
+    display: grid;
+    grid-template-columns: 1.35fr .85fr;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: linear-gradient(155deg, #273c5a, #52677f 60%, #d99e83);
+    overflow: hidden;
+}
+
+.proposal-manga {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.proposal-manga img {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.proposal-photo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 300px;
+    transform: rotate(3deg);
+    justify-self: center;
+}
+
+.proposal-photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #f4eadc;
+}
+
+@media(max-width:760px) {
+    .proposal-art {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .proposal-manga img {
+        height: 250px;
+    }
+
+    .proposal-photo {
+        max-width: 270px;
+    }
+}

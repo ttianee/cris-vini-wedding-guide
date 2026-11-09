@@ -1,0 +1,114 @@
+/* Our Story page — Golden Ocean */
+.story-hero{height:min(610px,72vh);min-height:430px;position:relative;display:flex;align-items:end;overflow:hidden;color:#fff}
+.story-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.story-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,34,48,.68),rgba(20,34,48,.12)),linear-gradient(0deg,rgba(20,34,48,.35),transparent 60%)}
+.story-hero-copy{position:relative;width:min(var(--content),calc(100% - 48px));margin:0 auto;padding:65px 0}
+.story-hero-copy .eyebrow{color:var(--peach)}
+.story-hero-copy h1{margin:.15em 0;font-size:clamp(3.7rem,8vw,7rem)}
+.story-hero-copy p:last-child{font-size:1.05rem;max-width:550px}
+.story-intro{text-align:center;max-width:900px}
+.story-intro h2{max-width:780px;margin:15px auto 24px}
+.story-intro>p:last-child{margin-inline:auto;color:var(--ocean)}
+.story-chapter{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);align-items:center;gap:clamp(38px,7vw,100px);width:min(1200px,calc(100% - 48px));margin:0 auto;padding:65px 0}
+.story-chapter.chapter-reverse{grid-template-columns:minmax(320px,.95fr) minmax(0,1.05fr)}
+.chapter-reverse .chapter-photo{order:2}
+.chapter-photo{height:clamp(330px,42vw,560px);overflow:hidden;background:var(--cream)}
+.chapter-photo img{width:100%;height:100%;object-fit:cover}
+.chapter-copy{max-width:550px}
+.chapter-copy h2,.japan-copy h2,.proposal-copy h2{font-size:clamp(2.5rem,4.4vw,4.2rem)}
+.chapter-copy .eyebrow,.japan-copy .eyebrow,.proposal-copy .eyebrow{color:var(--gold)}
+.chapter-copy p:not(.eyebrow),.japan-copy p:not(.eyebrow),.proposal-copy p:not(.eyebrow){color:var(--ocean)}
+.chapter-online{background:var(--cream);width:100%;padding:80px max(24px,calc((100% - 1200px)/2));grid-template-columns:1fr 1fr}
+.chapter-art{min-height:330px;display:flex;align-items:center;justify-content:center;gap:10px;position:relative;background:radial-gradient(ellipse at center,#fff 0%,#f3eadc 72%)}
+.online-panel{width:34%;height:190px;border:1px solid #d8c6a7;background:rgba(255,255,255,.72);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 12px 35px rgba(48,60,70,.07)}
+.online-panel span{font-size:1.7rem;color:var(--gold)}
+.online-panel b{font:2rem var(--serif);color:var(--ink)}
+.online-panel small{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean)}
+.online-connection{font-size:.7rem;color:var(--gold);white-space:nowrap}
+.japan-feature{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;align-items:center;margin:75px 0}
+.japan-photo{height:620px;overflow:hidden}
+.japan-photo img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.japan-copy{padding:clamp(35px,7vw,100px);max-width:720px}
+.proposal-section{background:#17283a;color:#fff;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.proposal-photo{min-height:600px;overflow:hidden}
+.proposal-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.proposal-copy{padding:clamp(40px,7vw,100px);align-self:center;max-width:720px}
+.proposal-copy h2{color:#fff}
+.proposal-copy p:not(.eyebrow){color:#e8e4df}
+.proposal-copy .eyebrow{color:var(--peach)}
+.proposal-date{display:inline-block;margin-top:22px;padding-top:12px;border-top:1px solid rgba(255,255,255,.35);font-size:.72rem;letter-spacing:.25em;color:var(--peach)}
+.story-ending{text-align:center;padding:110px 24px 95px;background:linear-gradient(180deg,#f8f4ed,#f1e8dc)}
+.story-ending h2{font-size:clamp(3rem,6vw,5rem)}
+.story-ending>p:not(.eyebrow){max-width:700px;margin:22px auto;color:var(--ocean)}
+.story-ending .ending-line{font:italic clamp(1.35rem,2.4vw,2rem) var(--serif);color:var(--ink)}
+.ending-monogram{font:2.5rem var(--serif);margin-top:36px;color:var(--ink)}
+.ending-monogram i{color:var(--gold)}
+@media(max-width:760px){
+ .story-hero{min-height:470px;height:65vh}
+ .story-hero-copy{padding:42px 0}
+ .story-intro{padding-block:65px}
+ .story-chapter,.story-chapter.chapter-reverse,.chapter-online{grid-template-columns:1fr;gap:25px;padding:50px 24px}
+ .chapter-reverse .chapter-photo{order:0}
+ .chapter-photo{height:340px}
+ .chapter-art{min-height:245px;order:0}
+ .online-panel{height:150px}
+ .japan-feature,.proposal-section{grid-template-columns:1fr;margin:50px 0}
+ .japan-photo{height:460px}
+ .japan-copy,.proposal-copy{padding:48px 25px}
+ .proposal-photo{min-height:420px;height:60vh}
+}
+.proposal-art {
+    position: relative;
+    min-height: 350px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: linear-gradient(155deg, #273c5a, #52677f 60%, #d99e83);
+    overflow: hidden;
+}
+
+.proposal-manga {
+    position: relative;
+    z-index: 1;
+}
+
+.proposal-manga img {
+    display: block;
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.proposal-photo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 270px;
+    transform: rotate(3deg);
+    justify-self: center;
+}
+
+.proposal-photo img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f4eadc;
+}
+
+@media(max-width:760px) {
+    .proposal-art {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .proposal-manga img {
+        height: 230px;
+    }
+
+    .proposal-photo {
+        max-width: 240px;
+    }
+}
