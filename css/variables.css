@@ -1,0 +1,36 @@
+:root{--cream:#f4ebdd;--paper:#fbf6ef;--ink:#2f3f56;--ocean:#6a8ca0;--rose:#d8a7b0;--peach:#f2c2a6;--mist:#bfd0d6;--gold:#bda16c;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,sans-serif;--content:1120px}
+
+
+:root {
+    --ocean-navy: #263954;
+    --ocean-blue: #405875;
+    --sea-muted: #71849a;
+    --sunset-gold: #ad8050;
+    --paper-cream: #fbf7f0;
+    --paper-warm: #f1e8dc;
+}
+
+/* Stronger text contrast */
+body {
+    color: var(--ocean-navy);
+    background: var(--paper-cream);
+}
+
+.hero h1,
+.hero .eyebrow,
+.hero-date,
+.hero .tagline {
+    color: var(--ocean-navy);
+}
+
+/* Navigation contrast */
+.nav-brand,
+.nav-links a {
+    color: var(--ocean-navy);
+}
+
+.nav-links a:hover {
+    color: var(--sunset-gold);
+}
+
+

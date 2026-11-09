@@ -1,0 +1,467 @@
+
+/* =========================================
+   HERO
+   Portrait image and editorial text
+   ========================================= */
+
+.hero {
+    min-height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    background: #f8f3eb;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: min(72vh, 680px);
+    min-height: 420px;
+    background: url('../assets/images/couple/hero-watercolor.webp')
+        center 43% / cover no-repeat;
+}
+
+.hero-shade {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 42px 24px 38px;
+    background: #f8f3eb;
+    color: #34445e;
+    text-align: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #34445e;
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    line-height: 1;
+    margin: 12px 0 16px;
+    text-shadow: none;
+}
+
+.hero .eyebrow,
+.hero-date {
+    width: 100%;
+    color: #718096;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .eyebrow {
+    margin-bottom: 18px;
+}
+
+.hero .tagline {
+    color: #52627a;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    font-family: italic 1.35rem var(--serif);
+    margin: 0 auto;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.hero-date {
+    margin: 20px auto 24px;
+}
+
+.hero-bottom {
+    position: relative;
+    bottom: auto;
+    padding: 0 20px 22px;
+    background: #f8f3eb;
+    color: #718096;
+    letter-spacing: 0.2em;
+    font-size: 0.62rem;
+    text-align: center;
+}
+
+
+/* =========================================
+   NAVIGATION — WEDDING MONOGRAM
+   ========================================= */
+
+.nav-brand img,
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   HERO DATE AND CAT MONOGRAM
+   ========================================= */
+
+.hero-date-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
+    margin: 0 auto 35px;
+}
+
+.hero-date-row .hero-date {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+}
+
+.countdown-monogram {
+    display: block !important;
+    width: 220px !important;
+    height: auto !important;
+    max-width: none !important;
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   COUNTDOWN
+   ========================================= */
+
+.countdown-section {
+    text-align: center;
+    padding-block: 55px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: clamp(28px, 7vw, 90px);
+    margin-top: 24px;
+}
+
+.countdown div {
+    display: grid;
+}
+
+.countdown strong {
+    font: 3rem var(--serif);
+}
+
+.countdown span {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ocean);
+}
+
+
+/* =========================================
+   INTRODUCTION
+   ========================================= */
+
+.intro-section {
+    padding-top: 40px;
+}
+
+.intro-copy h2 {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+}
+
+
+/* =========================================
+   CELEBRATION PREVIEW
+   ========================================= */
+
+.celebration-preview {
+    background: var(--cream);
+    padding-block: 72px;
+}
+
+.celebration-preview .section-wrap {
+    padding-block: 0;
+}
+
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 35px 0 10px;
+}
+
+.day-card {
+    background: var(--paper);
+    padding: 22px;
+    min-height: 175px;
+}
+
+.day-card span {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--ocean);
+}
+
+.day-card h3 {
+    font-size: 1.55rem;
+}
+
+.day-card p {
+    font-size: 0.78rem;
+}
+
+.day-card.featured {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.day-card.featured span {
+    color: var(--peach);
+}
+
+
+/* =========================================
+   DESTINATION PREVIEW
+   ========================================= */
+
+.destination-preview {
+    padding-block: 100px;
+}
+
+.location-line {
+    font-size: 0.78rem;
+    color: var(--ocean);
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================================
+   QUICK LINKS
+   ========================================= */
+
+.quick-links {
+    text-align: center;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.link-grid a {
+    padding: 22px;
+    border: 1px solid var(--mist);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: 0.2s;
+}
+
+.link-grid a:hover {
+    background: var(--cream);
+    transform: translateY(-3px);
+}
+
+.link-grid span {
+    font-size: 0.65rem;
+    color: var(--gold);
+}
+
+.link-grid b {
+    font: 1.5rem var(--serif);
+}
+
+.link-grid small {
+    font-size: 0.7rem;
+    color: var(--ocean);
+}
+
+
+
+/* =========================================
+   MEMORIES BANNER — KAI & YUKI
+   Full portrait photo, no cropping
+   ========================================= */
+
+.memories-banner {
+    position: relative;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    padding: 65px max(24px, calc((100% - var(--content)) / 2));
+
+    background-color: var(--ink);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(28, 45, 62, 1) 0%,
+            rgba(28, 45, 62, 0.96) 38%,
+            rgba(28, 45, 62, 0.35) 65%,
+            rgba(28, 45, 62, 0.05) 100%
+        ),
+        url('../assets/images/kai-yuki-together.jpg');
+
+    background-size: 100% 100%, auto 100%;
+    background-position: center, right center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.memories-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+}
+
+.memories-banner .eyebrow {
+    color: var(--peach);
+}
+
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .memories-banner {
+        min-height: 620px;
+        align-items: flex-start;
+        padding: 55px 24px 300px;
+
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(28, 45, 62, 1) 0%,
+                rgba(28, 45, 62, 0.96) 38%,
+                rgba(28, 45, 62, 0.05) 75%
+            ),
+            url('../assets/images/kai-yuki-together.jpg');
+
+        background-size: 100% 100%, auto 55%;
+        background-position: center, center bottom;
+        background-repeat: no-repeat;
+    }
+
+    .memories-content {
+        max-width: 100%;
+    }
+}
+
+
+
+/* =========================================
+   INTERNAL PAGE HERO
+   ========================================= */
+
+.page-hero {
+    height: 430px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+    color: white;
+}
+
+.page-hero > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(26, 42, 58, 0.72),
+        rgba(26, 42, 58, 0.12)
+    );
+}
+
+.page-hero-content {
+    position: relative;
+    padding: 50px max(24px, calc((100% - var(--content)) / 2));
+    max-width: 850px;
+}
+
+.page-hero-content .eyebrow {
+    color: var(--peach);
+}
+
+.page-hero-content p:last-child {
+    max-width: 600px;
+}
+
+
+/* =========================================
+   PAGE CONTENT
+   ========================================= */
+
+.page-content {
+    min-height: 380px;
+}
+
+.content-placeholder {
+    margin: 35px 0;
+    padding: 55px 25px;
+    background: var(--cream);
+    text-align: center;
+    color: var(--ocean);
+}
+
+.content-placeholder span {
+    font: 2rem var(--serif);
+    color: var(--gold);
+}
+
+.content-placeholder p {
+    margin: 8px auto;
+}
+
+
+/* =========================================
+   DESTINATION VIDEO — CIRCULAR
+   ========================================= */
+
+.destination-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #26364f;
+}
+
+.destination-video iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 177.78%;
+    height: 100%;
+    transform: translateX(-50%);
+    border: 0;
+}
+
+.memories-banner-image {
+    width: 100%;
+    overflow: hidden;
+    background: #26364f;
+}
+
+.memories-banner-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
