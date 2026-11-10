@@ -1,0 +1,60 @@
+.travel-hero{position:relative;min-height:510px;height:clamp(510px,54vw,660px);display:flex;align-items:center;overflow:hidden;color:var(--paper)}
+.travel-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.travel-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,38,55,.68),rgba(24,38,55,.12) 78%)}
+.travel-hero-content{position:relative;z-index:1;width:min(var(--content),calc(100% - 48px));margin:0 auto;padding:55px 0}
+.travel-hero .eyebrow{color:var(--peach)}
+.travel-hero h1{font:clamp(4rem,8vw,7.4rem)/.88 var(--serif);white-space:pre-line;max-width:760px;margin:16px 0 22px}
+.travel-hero-content>p:last-child{max-width:480px;font-size:1rem;line-height:1.8}
+.travel-intro{text-align:center;max-width:940px;padding-top:90px;padding-bottom:85px}
+.travel-intro h2,.arrival-heading h2,.driving-copy h2,.before-travel h2{font-size:clamp(2.5rem,5vw,4.2rem);line-height:1.02;margin:14px auto 22px}
+.travel-intro>p:not(.eyebrow){max-width:760px;margin:0 auto;line-height:1.9}
+.travel-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:42px}
+.travel-facts div{border-top:1px solid var(--mist);padding:18px 10px;display:flex;flex-direction:column;gap:7px}
+.travel-facts strong{font:2rem var(--serif);color:var(--ocean)}
+.travel-facts span{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:#687789}
+.map-section{background:#f1e8dc;padding:90px 0 80px}
+.travel-section-heading{text-align:center;max-width:820px;margin:0 auto 32px}
+.travel-section-heading h2{font-size:clamp(2.6rem,5vw,4.3rem);margin:12px 0}
+.travel-section-heading>p:last-child{max-width:650px;margin:0 auto}
+.map-switch{display:flex;justify-content:center;gap:8px;margin:0 auto 15px;flex-wrap:wrap}
+.map-tab{border:1px solid #aab5c0;background:transparent;color:var(--ink);padding:12px 18px;font:500 .68rem Montserrat,sans-serif;letter-spacing:.04em;cursor:pointer}
+.map-tab.active,.map-tab:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.travel-map{height:520px;width:100%;background:#e5e1d8;border:1px solid rgba(47,63,86,.15);z-index:0}
+.map-legend{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;padding:18px 0 8px;font-size:.7rem;color:#58677a}
+.map-legend>span{display:flex;align-items:center;gap:8px}
+.legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#7895ad}.legend-dot.airport{background:#668ba5}.legend-dot.resort{background:#c28c55}.legend-dot.origin{background:#637c70}
+.map-directions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:18px auto 0}
+.map-directions a,.travel-cta{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 19px;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase}
+.map-directions a:hover,.travel-cta:hover{background:var(--ocean)}
+.map-note{font-size:.68rem;color:#687789;text-align:center;max-width:800px;margin:17px auto 0}
+.arrival-section{padding-top:95px;padding-bottom:100px}
+.arrival-heading{max-width:820px;text-align:center;margin:0 auto 40px}
+.arrival-heading>p:last-child{max-width:650px;margin:0 auto}
+.arrival-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.arrival-card{position:relative;background:var(--cream);padding:35px 28px 30px;min-height:310px}
+.arrival-card-number{position:absolute;right:25px;top:18px;font:2.6rem var(--serif);color:#d4c5b1}
+.arrival-card .eyebrow{font-size:.59rem;color:#66819a;margin-bottom:18px}
+.arrival-card h3{font:2rem var(--serif);margin:0 0 14px}
+.arrival-card p:not(.eyebrow){font-size:.8rem;line-height:1.8}
+.arrival-card a{display:inline-block;margin-top:8px;color:var(--ocean);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--gold);padding-bottom:5px}
+.international-note{max-width:850px;margin:28px auto 0;padding:23px 28px;background:#f1e8dc;border-left:2px solid var(--gold)}
+.international-note strong{font:1.45rem var(--serif)}.international-note p{font-size:.78rem;margin:8px 0 0;line-height:1.8}
+.transfer-section{background:#2f3f56;color:var(--paper);padding:0}
+.transfer-layout{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;padding-top:85px;padding-bottom:85px}
+.transfer-image{height:470px;overflow:hidden}.transfer-image img{width:100%;height:100%;object-fit:cover}
+.transfer-copy .eyebrow{color:var(--peach)}.transfer-copy h2{font:clamp(2.6rem,5vw,4.1rem)/1 var(--serif);margin:12px 0 20px}.transfer-copy p{font-size:.82rem;line-height:1.85;color:#f1e8dc}.transfer-copy .travel-cta{margin:10px 0 12px;background:var(--peach);color:var(--ink)}.transfer-copy .transfer-small{font-size:.68rem;color:#d6dce2}
+.driving-section{display:grid;grid-template-columns:1.35fr .65fr;gap:8%;align-items:center;padding-top:95px;padding-bottom:95px}
+.driving-copy>p:not(.eyebrow){font-size:.84rem;line-height:1.9}.driving-copy .text-link{display:inline-block;margin-top:12px;color:var(--ocean);border-bottom:1px solid var(--gold);padding-bottom:5px;font-size:.7rem}
+.drive-fact{background:var(--cream);padding:30px;display:grid;grid-template-columns:1fr;gap:5px;box-shadow:0 12px 35px rgba(47,63,86,.06)}.drive-fact strong{font:2.8rem var(--serif);color:var(--ocean);margin-top:8px}.drive-fact span{font-size:.68rem;color:#687789;text-transform:uppercase;letter-spacing:.04em}
+.una-note-section{background:#f1e8dc;padding:45px 0}.una-note{display:flex;gap:22px;align-items:flex-start;max-width:920px}.una-note>span{font:2rem var(--serif);color:var(--gold)}.una-note .eyebrow{font-size:.58rem}.una-note h3{font:1.9rem var(--serif);margin:4px 0 8px}.una-note p:last-child{font-size:.78rem;line-height:1.8;margin:0}
+.before-travel{padding-top:95px;padding-bottom:95px}.before-travel>.eyebrow,.before-travel>h2{text-align:center}.before-travel>h2{max-width:760px}.before-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}.before-grid article{border-top:1px solid var(--mist);padding-top:18px}.before-grid article>span{font:1.5rem var(--serif);color:var(--gold)}.before-grid h3{font:1.7rem var(--serif);margin:12px 0}.before-grid p{font-size:.77rem;line-height:1.8}
+.travel-footer-note{background:#2f3f56;color:var(--paper);text-align:center;padding:42px 0}.travel-footer-note p{font:1.8rem var(--serif);max-width:780px;margin:0 auto}
+.leaflet-popup-content-wrapper{border-radius:2px;font-family:Montserrat,sans-serif}.leaflet-popup-content{font-size:12px;line-height:1.6}.leaflet-popup-content strong{font-family:'Cormorant Garamond',serif;font-size:18px}
+@media(max-width:800px){.arrival-cards{grid-template-columns:1fr}.arrival-card{min-height:0}.transfer-layout{grid-template-columns:1fr;gap:32px}.transfer-image{height:320px}.driving-section{grid-template-columns:1fr;gap:30px}.drive-fact{grid-template-columns:1fr 1fr}.drive-fact strong{font-size:2.3rem}.before-grid{grid-template-columns:1fr;gap:18px}.travel-map{height:430px}}
+@media(max-width:560px){.travel-hero{height:480px;min-height:480px}.travel-hero-content{width:calc(100% - 40px)}.travel-hero h1{font-size:clamp(3.7rem,15vw,5.3rem)}.travel-intro{padding-top:65px;padding-bottom:65px}.travel-facts{grid-template-columns:1fr;gap:0}.travel-facts div{padding:13px}.map-section{padding:65px 0}.travel-map{height:380px}.map-directions{flex-direction:column}.map-directions a{text-align:center}.arrival-section{padding-top:65px;padding-bottom:65px}.transfer-layout{padding-top:65px;padding-bottom:65px}.driving-section{padding-top:65px;padding-bottom:65px}.drive-fact{padding:22px}.una-note{gap:13px}.before-travel{padding-top:65px;padding-bottom:65px}.travel-footer-note p{font-size:1.5rem}}
+
+/* Interactive Google Maps embed: avoids external Leaflet script/tile dependencies */
+.travel-map-frame { width:100%; height:520px; border:1px solid rgba(47,63,86,.15); background:#e5e1d8; overflow:hidden; position:relative; z-index:0; }
+.travel-map-frame iframe { display:block; width:100%; height:100%; border:0; }
+@media(max-width:800px) { .travel-map-frame { height:430px; } }
+@media(max-width:560px) { .travel-map-frame { height:380px; } }

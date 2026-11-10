@@ -1,0 +1,110 @@
+/* Celebration page — Golden Ocean watercolor treatment */
+.celebration-page{background:#f7f2e9;color:#30415a;overflow:hidden}
+.celebration-page h1,.celebration-page h2,.celebration-page h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400}
+.celebration-hero{position:relative;min-height:620px;background:#e9dfd1;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:70px max(7vw,32px) 80px;isolation:isolate}
+.hero-wash{position:absolute;inset:0;background:radial-gradient(ellipse at 16% 22%,rgba(255,255,255,.75),transparent 44%),linear-gradient(110deg,#f7eee1 0%,#f0e4d6 54%,#e8e3d8 100%);z-index:-2}
+.celebration-hero:after{content:"";position:absolute;inset:0;opacity:.18;pointer-events:none;background-image:radial-gradient(#b49d84 .55px,transparent .55px);background-size:5px 5px;z-index:-1}
+.celebration-hero-copy{max-width:560px;position:relative;z-index:2;padding:30px 0}
+.celebration-hero h1{font-size:clamp(4rem,7vw,7.2rem);line-height:.88;letter-spacing:-.04em;margin:20px 0 24px;color:#30415a}
+.celebration-hero-copy>p:not(.eyebrow){font-size:1.03rem;line-height:1.9;max-width:460px;color:#50627a}
+.eyebrow{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#66819a;font-weight:500}
+.hero-signature{display:inline-block;margin-top:24px;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;font-style:italic;color:#b17e66}
+.hero-signature i{font-style:normal;color:#6e8795}
+.hero-art{position:relative;justify-self:end;width:min(100%,600px);height:490px;filter:drop-shadow(0 20px 24px rgba(72,65,54,.12))}
+.hero-art figure{margin:0;position:absolute}
+.hero-art img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.hero-art-ceremony {
+  top: 0;
+  right: 0;
+  width: 82%;
+  transform: rotate(1deg);
+  z-index: 1;
+}
+
+.hero-art-couple {
+  left: -3%;
+  bottom: -5%;
+  width: 60%;
+  z-index: 2;
+  transform: rotate(-2deg);
+  padding: 8px;
+  background: rgba(249,244,235,.88);
+  box-shadow: 0 14px 35px rgba(60,55,48,.16);
+}
+
+
+.hero-bottom-note{position:absolute;bottom:28px;left:max(7vw,32px);font-size:.62rem;letter-spacing:.2em;color:#73869a}
+.welcome-note{text-align:center;max-width:760px;margin:0 auto;padding:105px 28px 90px}
+.ornament{font-size:1.25rem;color:#b98d72;letter-spacing:.35em}
+.welcome-note .eyebrow{margin:24px 0 14px}
+.welcome-note h2{font-size:clamp(2.7rem,5vw,4.4rem);line-height:1;margin:0 0 22px}
+.welcome-note>p:last-child{max-width:650px;margin:auto;line-height:1.9;color:#647286;font-size:.95rem}
+.days-story{max-width:1180px;margin:0 auto;padding:0 36px 100px}
+.day-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(45px,8vw,120px);align-items:center;margin:0 0 100px}
+.day-art{position:relative;min-width:0}
+.day-art img{display:block;width:100%;aspect-ratio:1.13/1;object-fit:cover;border-radius:2px;box-shadow:0 22px 55px rgba(66,70,72,.11);mix-blend-mode:multiply}
+.day-art:before{content:"";position:absolute;inset:-13px 13px 13px -13px;border:1px solid rgba(180,145,116,.36);z-index:-1}
+.art-caption{display:block;text-align:right;margin:14px 6px 0;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.12rem;font-style:italic;color:#a47b69}
+.day-copy{max-width:450px;position:relative;padding:18px 0}
+.day-date{font-size:.64rem;letter-spacing:.18em;color:#8b8e8b;margin:0 0 6px}
+.day-date span{color:#c89b7d;padding:0 5px}
+.day-number{font-family:"Cormorant Garamond",Georgia,serif;font-size:5.6rem;line-height:.9;color:#d7c4b1;margin:0 0 12px}
+.day-copy h2{font-size:clamp(2.7rem,4vw,4rem);line-height:.95;margin:0 0 20px;color:#30415a}
+.day-copy>p:not(.day-date):not(.day-number):not(.eyebrow){font-size:.92rem;line-height:1.95;color:#657286;margin:0}
+.little-note{display:block;margin-top:23px;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;font-style:italic;color:#b07f69}
+.day-right .day-art{order:2}
+.day-right .day-copy{order:1}
+.wedding-day{padding:38px;background:linear-gradient(135deg,rgba(236,225,211,.72),rgba(250,246,238,.92));border:1px solid rgba(186,151,123,.25);gap:55px}
+.wedding-day .day-art img{aspect-ratio:1/1.12}
+.wedding-day .eyebrow{margin:0 0 12px}
+.ceremony-details{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0 8px;padding:17px 0;border-top:1px solid #d9cbbd;border-bottom:1px solid #d9cbbd}
+.ceremony-details div{display:flex;flex-direction:column;gap:5px}
+.ceremony-details strong{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.7rem;font-weight:500;color:#b17f69}
+.ceremony-details span{font-size:.65rem;line-height:1.5;color:#657286}
+.dress-code-section{display:grid;grid-template-columns:1fr 1fr;background:#eee5d8;align-items:center}
+.dress-code-image{min-height:610px;display:flex;align-items:center;justify-content:center;padding:55px}
+.dress-code-image img{width:100%;max-width:660px;height:auto;mix-blend-mode:multiply;filter:drop-shadow(0 15px 22px rgba(65,55,43,.08))}
+.dress-code-copy{padding:80px clamp(35px,7vw,110px) 80px 30px;max-width:680px}
+.dress-code-copy h2{font-size:clamp(2.9rem,4.5vw,4.6rem);line-height:.95;margin:18px 0 24px}
+.dress-code-copy p:not(.eyebrow){font-size:.91rem;line-height:1.95;color:#657286}
+.style-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.style-chips span{border:1px solid #cdb9a5;border-radius:30px;padding:9px 14px;font-size:.67rem;letter-spacing:.04em;color:#52667c}
+.final-note{position:relative;min-height:570px;display:grid;place-items:center;text-align:center;overflow:hidden;background:#24384d}
+.final-note>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.68}
+.final-note-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,43,60,.72),rgba(27,43,60,.36),rgba(27,43,60,.68))}
+.final-note-copy{position:relative;z-index:1;max-width:720px;padding:90px 28px;color:#fff}
+.final-note-copy .eyebrow{color:#f0d4bd;margin:20px 0 14px}
+.final-note-copy h2{font-size:clamp(2.9rem,5vw,4.8rem);line-height:.95;margin:0 0 20px}
+.final-note-copy>p:not(.eyebrow){font-size:.9rem;line-height:1.95;color:rgba(255,255,255,.87)}
+.final-note-copy .hero-signature{color:#f0cbb2}
+.celebration-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:25px max(6vw,24px);background:#26394f;color:#e9e1d7;font-size:.62rem;letter-spacing:.16em}
+.celebration-footer a{color:#e9e1d7;text-decoration:none;border-bottom:1px solid rgba(233,225,215,.5);padding-bottom:4px}
+@media(max-width:800px){
+ .celebration-hero{grid-template-columns:1fr;min-height:auto;padding:70px 26px 65px}
+ .celebration-hero-copy{padding:10px 0 0}
+ .celebration-hero h1{font-size:clamp(4rem,16vw,6rem)}
+ .hero-art{width:min(100%,520px);height:auto;aspect-ratio:1.05/1;justify-self:center;margin:12px auto 18px}
+ .hero-art-ceremony{width:88%}
+ .hero-art-couple{width:72%}
+ .hero-bottom-note{left:26px;bottom:18px}
+ .welcome-note{padding:78px 25px 65px}
+ .days-story{padding:0 24px 65px}
+ .day-story{grid-template-columns:1fr;gap:26px;margin-bottom:68px}
+ .day-right .day-art,.day-right .day-copy{order:initial}
+ .day-copy{max-width:none;padding:0 4px}
+ .day-art img{aspect-ratio:1.2/1}
+ .day-number{font-size:4.6rem}
+ .wedding-day{padding:22px;gap:24px}
+ .wedding-day .day-art img{aspect-ratio:1.2/1}
+ .ceremony-details{gap:7px}
+ .ceremony-details span{font-size:.6rem}
+ .dress-code-section{grid-template-columns:1fr}
+ .dress-code-image{min-height:auto;padding:30px 22px 5px}
+ .dress-code-copy{padding:30px 28px 65px}
+ .final-note{min-height:620px}
+ .celebration-footer{flex-wrap:wrap;justify-content:center;text-align:center}
+}
+@media(prefers-reduced-motion:no-preference){
+ .day-art img{transition:transform .7s ease}
+ .day-art:hover img{transform:translateY(-5px) rotate(-.4deg)}
+}
