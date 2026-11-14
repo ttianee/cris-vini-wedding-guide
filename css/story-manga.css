@@ -149,96 +149,74 @@
         max-width: 270px;
     }
 }
-
-/* Navigation safeguard for Our Story page: keep the desktop pill menu horizontal. */
-.site-header > .desktop-nav {
-    display: flex !important;
-    flex: 1 1 auto;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center;
-    gap: 6px !important;
-    min-width: 0;
+/* Mobile photo captions: keep lettering in the white polaroid footer, never over faces */
+@media(max-width:760px){
+  .memory-photo{
+    box-sizing:border-box;
+    width:100%;
+    max-width:100%;
+    padding:9px 9px 14px;
+    overflow:hidden;
+  }
+  .memory-photo img{
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+    max-height:360px;
+    object-fit:contain;
+  }
+  .panel-photo .memory-photo img{
+    height:auto;
+    max-height:390px;
+    object-fit:contain;
+  }
+  .memory-photo figcaption{
+    position:static;
+    display:block;
+    width:100%;
+    min-height:0;
+    margin:7px 0 0;
+    padding:0 5px;
+    box-sizing:border-box;
+    text-align:center;
+    font-size:clamp(.92rem,4.4vw,1.15rem);
+    line-height:1.12;
+    overflow-wrap:anywhere;
+    color:#52647a;
+  }
+  .memory-pair{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:12px;
+    padding-top:24px;
+    align-items:stretch;
+  }
+  .memory-pair .memory-photo{
+    min-width:0;
+    padding:7px 7px 12px;
+  }
+  .memory-pair .memory-photo img{
+    height:clamp(130px,38vw,190px);
+    max-height:none;
+    object-fit:contain;
+  }
+  .memory-pair .memory-photo figcaption{
+    font-size:clamp(.78rem,3.5vw,.98rem);
+    line-height:1.12;
+    margin-top:6px;
+  }
+  .travel-stamp{
+    width:48px;
+    height:48px;
+    left:calc(50% - 24px);
+    top:-1px;
+    font-size:.8rem;
+  }
+  .travel-stamp span{font-size:1.05rem}
+  .travel-stamp small{font-size:.38rem}
 }
-.site-header > .desktop-nav > .nav-label {
-    display: block !important;
-    visibility: visible !important;
-    width: auto;
-    color: #8c7658;
-    text-align: center;
-}
-.site-header > .desktop-nav > .nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    width: max-content;
-    max-width: 100%;
-    padding: 5px;
-    background: #eee7dc;
-    border: 1px solid #e0d5c5;
-    border-radius: 999px;
-}
-.site-header > .desktop-nav > .nav-links > a {
-    display: inline-flex !important;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    min-height: 34px;
-    padding: 7px 10px !important;
-    margin: 0;
-    border-radius: 999px;
-    white-space: nowrap;
-}
-.site-header > .desktop-nav > .nav-links > a[aria-current="page"] {
-    background: #263b52;
-    color: #fffaf2;
-}
-@media (max-width: 820px) {
-    .site-header > .desktop-nav {
-        display: none !important;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        align-items: stretch !important;
-        padding: 17px 20px 22px;
-        background: var(--paper);
-        border-top: 1px solid #e8dfd2;
-        box-shadow: 0 12px 20px #1b2d3a18;
-    }
-    .site-header > .desktop-nav.open {
-        display: flex !important;
-    }
-    .site-header > .desktop-nav > .nav-label {
-        text-align: left;
-        padding: 0 7px 2px;
-    }
-    .site-header > .desktop-nav > .nav-links {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: 100%;
-        max-width: none;
-        gap: 7px;
-        padding: 0;
-        background: transparent;
-        border: 0;
-        border-radius: 0;
-    }
-    .site-header > .desktop-nav > .nav-links > a {
-        justify-content: flex-start;
-        min-height: 42px;
-        padding: 10px 13px !important;
-        border: 1px solid #e0d5c5;
-        border-radius: 8px;
-        background: #f8f3eb;
-        white-space: normal;
-    }
-}
-@media (max-width: 420px) {
-    .site-header > .desktop-nav > .nav-links {
-        grid-template-columns: 1fr;
-    }
+@media(max-width:380px){
+  .memory-pair{gap:8px}
+  .memory-pair .memory-photo{padding:6px 6px 10px}
+  .memory-pair .memory-photo figcaption{font-size:.74rem}
 }

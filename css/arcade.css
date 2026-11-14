@@ -94,3 +94,64 @@
 @media(max-width:800px){.arcade-hero{min-height:590px}.game-frame{height:540px}.jukebox-layout{grid-template-columns:1fr}.coming-games{grid-template-columns:1fr}.leaderboard-panel{padding:20px}.jukebox-section{padding:70px 20px}.arcade-intro{padding:75px 24px}}
 @media(max-width:520px){.arcade-hero{padding:65px 18px 60px}.arcade-hero h1{font-size:clamp(25px,8vw,42px);letter-spacing:-2px;text-shadow:3px 3px 0 #704c91,6px 6px 0 #10162d}.arcade-kicker,.section-pixel-label{font-size:8px}.arcade-subtitle{font-size:12px}.hero-meta{gap:12px;font-size:8px}.game-frame{height:480px}.cabinet-top,.cabinet-bottom{font-size:7px;flex-wrap:wrap}.score-table{font-size:10px}.score-table th{font-size:8px}.score-table td{padding:12px 7px}.song-form,.song-board{padding:18px}.song-item{grid-template-columns:28px minmax(0,1fr) auto;gap:8px;padding:10px}.vote-button{font-size:8px;padding:8px 7px}.arcade-signoff p{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.pixel-heart,.insert-coin{animation:none}.pixel-button{transition:none}}
+
+/* Mobile Jukebox layout: prevent form and vote controls from creating horizontal scroll */
+.arcade-page,
+.arcade-page *{
+  box-sizing:border-box;
+}
+.arcade-page{width:100%;max-width:100%;overflow-x:clip}
+.jukebox-section{width:100%;max-width:100%;min-width:0}
+.jukebox-layout,
+.song-form,
+.song-board,
+.song-list,
+.song-item{min-width:0;max-width:100%}
+.song-form input,
+.song-form button,
+.song-board button{box-sizing:border-box;max-width:100%}
+.song-form input{display:block;width:100%;min-width:0}
+.submit-song{white-space:normal;overflow-wrap:anywhere}
+.song-details{overflow-wrap:anywhere}
+.song-details strong,.song-details span,.song-details small{overflow-wrap:anywhere;word-break:break-word}
+@media(max-width:520px){
+  .jukebox-section{padding:52px 14px 58px}
+  .jukebox-header{padding:0 5px;margin-bottom:28px}
+  .jukebox-layout{grid-template-columns:minmax(0,1fr);gap:18px}
+  .song-form,.song-board{width:100%;padding:16px 14px;min-width:0}
+  .song-form h3,.song-board-head h3{font-size:clamp(15px,4.5vw,18px);line-height:1.45;overflow-wrap:anywhere}
+  .song-form label{font-size:clamp(8px,2.7vw,10px);line-height:1.6}
+  .song-form input{font-size:16px;padding:13px 10px}
+  .submit-song{
+    width:100%;
+    min-height:54px;
+    padding:12px 9px;
+    font-size:clamp(8px,2.5vw,10px);
+    line-height:1.55;
+  }
+  .song-item{
+    grid-template-columns:24px minmax(0,1fr);
+    gap:8px;
+    padding:10px;
+  }
+  .song-rank{font-size:11px}
+  .song-details strong{font-size:11px}
+  .song-details span{font-size:10px}
+  .vote-button{
+    grid-column:2;
+    justify-self:start;
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    font-size:8px;
+    line-height:1.5;
+    padding:8px 9px;
+  }
+  .song-empty{padding:18px 12px;font-size:11px}
+  .form-small,.form-status,.song-list-status{overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+  .jukebox-section{padding-left:10px;padding-right:10px}
+  .song-form,.song-board{padding:14px 11px}
+  .submit-song{font-size:8px}
+}
