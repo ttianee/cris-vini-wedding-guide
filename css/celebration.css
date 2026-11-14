@@ -108,3 +108,37 @@
  .day-art img{transition:transform .7s ease}
  .day-art:hover img{transform:translateY(-5px) rotate(-.4deg)}
 }
+
+
+/* Dress code emphasis — Golden Ocean */
+.dress-code-section {
+    position: relative;
+    background: linear-gradient(115deg, #eee5d8 0%, #f7f0e6 55%, #e8e4dc 100%);
+    border-top: 1px solid rgba(177,127,105,.22);
+    border-bottom: 1px solid rgba(177,127,105,.22);
+}
+.dress-code-copy {
+    position: relative;
+    margin: 38px clamp(22px, 5vw, 72px) 38px 0;
+    padding: clamp(28px, 4vw, 52px);
+    background: rgba(255,250,243,.78);
+    border: 1px solid rgba(177,127,105,.38);
+    border-left: 4px solid #b17f69;
+    box-shadow: 0 14px 36px rgba(49,63,79,.08);
+}
+.dress-code-copy .eyebrow {
+    display: inline-block;
+    padding: 8px 13px;
+    background: #26394f;
+    color: #f4dfca;
+    letter-spacing: .16em;
+    font-weight: 600;
+}
+.dress-code-copy h2 { margin-top: 18px; }
+@media(max-width:800px) {
+    .dress-code-copy {
+        margin: 12px 20px 38px;
+        padding: 28px 24px;
+    }
+    .dress-code-image { padding: 28px 22px 8px; }
+}

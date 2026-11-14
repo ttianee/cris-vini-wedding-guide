@@ -83,11 +83,76 @@
         width: 150px !important;
     }
 }
-@media (max-width: 600px) {
-    .destination-video {
-        width: min(100%, 360px);
-        aspect-ratio: 1 / 1;
-        margin: 0 auto;
-        border-radius: 50%;
-    }
+
+
+/* 2026 visual refinement — clearer actions and consistent mobile layout */
+.hero .button,
+.button {
+    border: 1px solid var(--gold);
+    box-shadow: 0 5px 14px rgba(34, 49, 68, .12);
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.hero .button:hover,
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 20px rgba(34, 49, 68, .18);
+}
+.link-grid a {
+    position: relative;
+    min-height: 150px;
+    border: 1px solid #c7b58f;
+    border-radius: 8px;
+    background: rgba(255,255,255,.55);
+    box-shadow: 0 4px 14px rgba(34,49,68,.05);
+    text-decoration: none;
+}
+.link-grid a::after {
+    content: "↗";
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+    color: var(--gold);
+    font-size: 1.1rem;
+    transition: transform .2s ease;
+}
+.link-grid a:hover,
+.link-grid a:focus-visible {
+    background: #fffaf2;
+    border-color: var(--gold);
+    box-shadow: 0 10px 24px rgba(34,49,68,.12);
+    transform: translateY(-3px);
+}
+.link-grid a:hover::after,
+.link-grid a:focus-visible::after { transform: translate(2px,-2px); }
+.link-grid a:focus-visible,
+.button:focus-visible,
+.text-link:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+.destination-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+}
+.destination-video iframe {
+    left: 0;
+    width: 100%;
+    transform: none;
+}
+@media (max-width: 760px) {
+    .section-wrap { width: min(100% - 36px, 680px); }
+    .destination-preview { padding-block: 58px; }
+    .destination-video { width: 100%; margin: 0; aspect-ratio: 16 / 9; }
+    .link-grid { gap: 12px; }
+    .link-grid a { min-height: 138px; padding: 17px 15px 28px; }
+    .link-grid b { font-size: 1.25rem; line-height: 1.15; }
+    .link-grid small { line-height: 1.45; }
+}
+@media (max-width: 420px) {
+    .link-grid { grid-template-columns: 1fr; }
+    .link-grid a { min-height: 112px; padding: 16px 18px 25px; }
+    .hero .button { width: min(100%, 320px); text-align: center; }
+    .countdown { gap: 12px; }
+    .countdown strong { font-size: 2rem; }
 }
